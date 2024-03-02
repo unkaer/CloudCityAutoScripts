@@ -6,10 +6,8 @@ import win32gui
 hWnd = win32gui.FindWindow("grcWindow", "alt:V Multiplayer") 
 print(hWnd)
 
-# 模拟按下E键
-win32api.PostMessage(hWnd, win32con.WM_KEYDOWN, 0x45, 0)
-# 等待一些时间，可以根据需要调整
-win32api.Sleep(100)
-# 模拟释放E键
-win32api.PostMessage(hWnd, win32con.WM_KEYUP, 0x45, 0)
+# 切换到前台
+win32gui.ShowWindow(hWnd, win32con.SW_RESTORE)
+win32gui.SetForegroundWindow(hWnd)
 
+win32api.SendMessage

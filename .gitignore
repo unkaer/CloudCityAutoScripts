@@ -1,3 +1,6 @@
-
-*.pyc
 guaji_log.txt
+build/*
+dist/*
+__pycache__/*
+*.png
+*.bmp
